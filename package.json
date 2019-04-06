@@ -14,10 +14,10 @@
     "packages/*"
   ],
   "scripts": {
-    "watch": "wsrun watch -r",
+    "watch": "yarn wsrun watch -r",
     "lint": "eslint . --ext=.js,.mjs --fix",
-    "build": "wsrun build -p client",
-    "start": "wsrun start -p server"
+    "build": "yarn wsrun -p client -c build",
+    "start": "yarn wsrun -p server -c start"
   },
   "dependencies": {
     "eslint-config-airbnb": "^17.1.0",
