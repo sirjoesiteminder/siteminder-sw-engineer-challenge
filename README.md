@@ -7,7 +7,7 @@ This service features a front end and back end to send emails via SendGrid and M
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. The project is deployed to Heroku. You can see it running here.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. The project is deployed to Heroku. You can see it running [here](https://siteminder-app.herokuapp.com).
 
 ### Prerequisites
 
