@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Email sending API with failover",
+  "main": "index.js",
+  "license": "MIT",
+  "engines" : { "node" : ">=11.13.0" },
+  "engineStrict" : true,
+  "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
+    "hapi": "^18.1.0",
+    "mailgun-js": "^0.22.0",
+    "nodemon": "^1.18.10"
+  },
+  "scripts": {
+    "start": "node --experimental-modules src/index.mjs",
+    "watch": "nodemon --experimental-modules src/index.mjs"
+  }
+}
