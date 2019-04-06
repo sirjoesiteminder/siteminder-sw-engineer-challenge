@@ -10,10 +10,10 @@ const data = {
 };
 
 export default async () => mailgun.messages().send(data).then(
-    function(data) {
-      console.log(data);
-    },
-    function(err) {
-      console.log(err);
-    }
-  );
+  (data) => {
+    console.log(data);
+  },
+  (err) => {
+    console.log(err);
+  },
+);
