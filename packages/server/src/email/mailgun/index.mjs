@@ -1,6 +1,6 @@
 import mg from 'mailgun-js';
 
-const mailgun = mg({ apiKey: '2416cf28-e97d5263', domain: 'www.siteminder.com' });
+const mailgun = mg({ apiKey: process.env.MALGUN_API_KEY, domain: 'www.siteminder.com' });
 
 const data = {
   from: 'me@samples.mailgun.org',

@@ -7,7 +7,7 @@ import send from './email/index.mjs';
 const __dirname = Path.dirname(new URL(import.meta.url).pathname);
 const server = Hapi.server({
   host: 'localhost',
-  port: NODE_ENV.port || 8000,
+  port: process.env.PORT || 8000,
   routes: {
     files: {
       relativeTo: Path.join(__dirname, '../../client/build'),

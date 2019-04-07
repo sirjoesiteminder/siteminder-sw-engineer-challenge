@@ -6,7 +6,10 @@
   "author": "Chris Malherbe",
   "license": "MIT",
   "private": true,
-  "@std/esm": { "esm": "js", "cjs": true },
+  "@std/esm": {
+    "esm": "js",
+    "cjs": true
+  },
   "engines": {
     "node": "11.13.0"
   },
@@ -20,17 +23,18 @@
     "start": "yarn wsrun -p server -c start"
   },
   "dependencies": {
+    "dotenv": "^7.0.0",
     "eslint-config-airbnb": "^17.1.0",
     "wsrun": "^3.6.4",
     "yarn": "^1.15.2"
   },
   "devDependencies": {
+    "babel-eslint": "^9.0.0",
     "eslint": "^5.3.0",
     "eslint-config-react-app": "^3.0.8",
     "eslint-plugin-flowtype": "2.50.1",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
-    "eslint-plugin-react": "7.12.4",
-    "babel-eslint": "^9.0.0"
+    "eslint-plugin-react": "7.12.4"
   }
 }
