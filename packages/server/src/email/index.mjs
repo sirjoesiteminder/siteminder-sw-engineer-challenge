@@ -1,4 +1,18 @@
 import sendSendgrid from './sendgrid/index.mjs';
 // import sendMailgun from './mailgun';
 
-export default async () => sendSendgrid();
+const trimEmails = value => value && value.split(',').map(s => s.trim()).join(',');
+
+export default async (input) => {
+  const data = {
+    to: trimEmails(input.to),
+    cc: trimEmails(input.cc),
+    bcc: trimEmails(input.bcc),
+    from: 'malherbe.chris.1@gmail.com',
+    subject: input.subject,
+    text: input.text,
+  };
+
+
+  return sendSendgrid(data);
+};

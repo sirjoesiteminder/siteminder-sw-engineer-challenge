@@ -46,6 +46,10 @@ Watch the server and client by running
 yarn watch
 ```
 
+Please set the following keys in your `.env` file
+- SENDGRID_API_KEY
+- MAILGUN_API_KEY
+
 
 ## Deployment
 
@@ -53,7 +57,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [water.css](https://github.com/kognise/water.css) - The web framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 

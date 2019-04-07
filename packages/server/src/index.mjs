@@ -1,7 +1,8 @@
-import Hapi from 'hapi';
-import Inert from 'inert';
+import Hapi from 'Hapi';
+import Inert from 'Inert';
 import Path from 'path';
 import send from './email/index.mjs';
+import Boom from 'Boom';
 
 // Create a server with a host and port
 const __dirname = Path.dirname(new URL(import.meta.url).pathname);
@@ -34,11 +35,16 @@ const start = async () => {
     server.route({
       method: 'POST',
       path: '/email',
-      handler: async (request, h) => {
-        console.log(request, h);
-        await send();
-        return 'hello world';
-      },
+      // TODO: add API validation with JOI
+      handler: async ({body}, h) => {
+        try {
+          return await send(body);
+        }
+        catch(err) {
+          console.error(err);
+          throw Boom.internal(err);
+        }
+      }
     });    
     
     await server.start();

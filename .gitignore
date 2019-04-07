@@ -7,6 +7,7 @@ yarn-error.log*
 
 # VS Code local history
 .history
+.idea/*
 
 # Runtime data
 pids
@@ -77,3 +78,5 @@ typings/
 
 # FuseBox cache
 .fusebox/
+.idea/codeStyles/codeStyleConfig.xml
+.idea/vcs.xml

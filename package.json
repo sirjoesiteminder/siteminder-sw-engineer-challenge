@@ -20,7 +20,8 @@
     "watch": "yarn wsrun watch -r",
     "lint": "eslint . --ext=.js,.mjs --fix",
     "build": "yarn wsrun -p client -c build",
-    "start": "yarn wsrun -p server -c start"
+    "start": "yarn wsrun -p server -c start",
+    "test": "yarn wsrun --exclude-missing test"
   },
   "dependencies": {
     "dotenv": "^7.0.0",
@@ -35,6 +36,6 @@
     "eslint-plugin-flowtype": "2.50.1",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
-    "eslint-plugin-react": "7.12.4"
+    "eslint-plugin-react": "^7.12.4"
   }
 }
