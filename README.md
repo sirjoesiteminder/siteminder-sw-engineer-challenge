@@ -62,8 +62,9 @@ Please set the following keys in your `.env` file
 Add additional notes about how to deploy this on a live system
 
 ## TODO
-- Add more tests
+- Add more tests, Unit and E2E
 - Implement FlowType (or TypeScript)
+
 
 ## Built With
 
