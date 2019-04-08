@@ -24,18 +24,24 @@ yarn install
 
 ## Running the tests
 
-To run all tests by running
+Tests are written with Jest. To run all tests by running:
 
 ```
 yarn test
 ```
 
+Examples of tests written:
+[Node](https://github.com/ChrisMalherbe/siteminder-sw-engineer-challenge/blob/master/packages/server/src/index.test.mjs#L8)
+[React](https://github.com/ChrisMalherbe/siteminder-sw-engineer-challenge/blob/master/packages/client/src/validate-email-array.test.js)
+[React](https://github.com/ChrisMalherbe/siteminder-sw-engineer-challenge/blob/master/packages/client/src/App.test.js)
+
+
 ### And coding style tests
 
-Explain what these tests test and why
+ESLint is implemented, you can run it with
 
 ```
-Give an example
+Yarn lint
 ```
 
 ### Local development
@@ -55,25 +61,20 @@ Please set the following keys in your `.env` file
 
 Add additional notes about how to deploy this on a live system
 
+## TODO
+- Add more tests
+- Implement FlowType (or TypeScript)
+
 ## Built With
 
-* [water.css](https://github.com/kognise/water.css) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [water.css](https://github.com/kognise/water.css) - Very minimal CSS framework with no classes
+* [React](https://reactjs.org/) - Clientside SPA framework
+* [Node](https://node.org) - Serverside 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+**Chris Malherbe** 
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
