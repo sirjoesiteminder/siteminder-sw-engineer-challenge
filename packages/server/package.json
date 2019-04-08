@@ -15,11 +15,12 @@
     "inert": "^5.1.3",
     "joi": "^14.3.1",
     "mailgun-js": "^0.22.0",
-    "nodemon": "^1.18.10"
+    "nodemon": "^1.18.10",
+    "opossum": "^1.11.0"
   },
   "scripts": {
     "start": "node --experimental-modules src/index.mjs",
-    "watch": "nodemon --experimental-modules src/index.mjs"
+    "watch": "nodemon --experimental-modules --require dotenv/config src/index.mjs"
   },
   "devDependencies": {
     "jest": "^24.7.1"

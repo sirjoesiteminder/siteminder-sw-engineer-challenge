@@ -1,7 +1,7 @@
 {
   "name": "siteminder-sw-engineer-challenge",
   "version": "1.0.0",
-  "description": "Hackerrank answer to the Siteminder challenge",
+  "description": "Hackerrank answer to the SiteMinder challenge",
   "main": "index.js",
   "author": "Chris Malherbe",
   "license": "MIT",

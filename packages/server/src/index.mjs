@@ -4,8 +4,6 @@ import Inert from 'Inert';
 import Path from 'path';
 import send from './email/index.mjs';
 import Boom from 'Boom';
-import dotenv from 'dotenv';
-dotenv.config();
 
 // Create a server with a host and port
 const __dirname = Path.dirname(new URL(import.meta.url).pathname);
@@ -16,7 +14,7 @@ const server = Hapi.server({
     files: {
       relativeTo: Path.join(__dirname, '../../client/build'),
     },
-  },
+  }
 });
 
 // Start the server
@@ -47,20 +45,22 @@ const start = async () => {
             subject: Joi.string().required(),
             body: Joi.string().required(),
           },
-          failAction: handleError
-        }
+          failAction: handleError,
+        },
+        cors: true
       },
       handler: async (req, h) => {
         try {
-          return await send(req.payload);
+          await send(req.payload);
+          return 'email sent';
         }
         catch(err) {
           console.error(err);
           throw Boom.internal(err);
         }
       }
-    });    
-    
+    });
+
     await server.start();
   } catch (err) {
     console.log(err);

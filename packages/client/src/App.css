@@ -3,17 +3,36 @@ body {
 }
 
 .app {
-    margin: 10rem;
+    margin: 2rem 10rem 2rem 10rem;
+}
+
+.center {
+    text-align: center;
 }
 
 .form-field {
     margin-bottom: 1rem;
 }
 
-.form-field input{
+.form-field input {
     width: 100%;
 }
 
 .form-field textarea {
+    width: 105%;
+    min-height: 15rem;
+}
+
+.small {
+    font-size: 0.8rem;
     width: 100%;
+}
+
+img {
+    width: 4rem;
+}
+
+.img {
+    text-align: center;
+    padding-top: 4rem;
 }
