@@ -1,9 +1,9 @@
-import Hapi from 'Hapi';
-import Joi from 'Joi';
-import Inert from 'Inert';
+import Hapi from 'hapi';
+import Joi from 'joi';
+import Inert from 'inert';
 import Path from 'path';
 import send from './email/index.mjs';
-import Boom from 'Boom';
+import Boom from 'boom';
 
 // Create a server with a host and port
 const __dirname = Path.dirname(new URL(import.meta.url).pathname);
@@ -21,7 +21,7 @@ const server = Hapi.server({
 const start = async () => {
   try {
     await server.register(Inert);
-    
+
     server.route({
       method: 'GET',
       path: '/{param*}',
