@@ -36,10 +36,11 @@ Tests are written with Jest. To run all tests by running:
 yarn test
 ```
 
-Examples of tests written:
-[Node](https://github.com/ChrisMalherbe/siteminder-sw-engineer-challenge/blob/master/packages/server/src/index.test.mjs#L8)
-[React](https://github.com/ChrisMalherbe/siteminder-sw-engineer-challenge/blob/master/packages/client/src/validate-email-array.test.js)
-[React](https://github.com/ChrisMalherbe/siteminder-sw-engineer-challenge/blob/master/packages/client/src/App.test.js)
+Examples of tests written in the sollution:
+- [Node](https://github.com/ChrisMalherbe/siteminder-sw-engineer-challenge/blob/master/packages/server/src/index.test.mjs#L8)
+
+- [React](https://github.com/ChrisMalherbe/siteminder-sw-engineer-challenge/blob/master/packages/client/src/validate-email-array.test.js)
+- [React](https://github.com/ChrisMalherbe/siteminder-sw-engineer-challenge/blob/master/packages/client/src/App.test.js)
 
 
 ### And coding style tests
