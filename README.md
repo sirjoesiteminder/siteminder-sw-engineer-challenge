@@ -2,7 +2,13 @@
 
 Answer by Chris Malherbe to the Sitemeinder SW Enineering test 2.2.
 
-This service features a front end and back end to send emails via SendGrid and Mailgun with automatic failover.
+This service features a front end and back end to send emails via SendGrid and Mailgun with automatic failover. 
+
+Some newer features have been used in this project to make it a bit more interesting like:
+- Native ES6 modules in Node by using `--experimental-modules`, this is not fit for production and is not supported in some libs like Jest (yet).
+- React Hooks
+- Yarn workspaces
+- Hapi 18.x
 
 
 ## Getting Started
@@ -71,6 +77,7 @@ Add additional notes about how to deploy this on a live system
 * [water.css](https://github.com/kognise/water.css) - Very minimal CSS framework with no classes
 * [React](https://reactjs.org/) - Clientside SPA framework
 * [Node](https://node.org) - Serverside 
+* [Hapi](https://github.com/hapijs/hapi/) - Routing framework
 
 ## Authors
 
