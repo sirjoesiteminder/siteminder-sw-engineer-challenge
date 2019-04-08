@@ -8,7 +8,6 @@ import Boom from 'boom';
 // Create a server with a host and port
 const __dirname = Path.dirname(new URL(import.meta.url).pathname);
 const server = Hapi.server({
-  host: 'localhost',
   port: process.env.PORT || 8000,
   routes: {
     files: {
