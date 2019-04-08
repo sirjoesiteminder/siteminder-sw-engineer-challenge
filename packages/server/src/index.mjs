@@ -9,7 +9,7 @@ import Boom from 'boom';
 const __dirname = Path.dirname(new URL(import.meta.url).pathname);
 const server = Hapi.server({
   host: 'localhost',
-  port: process.env.PORT || 8000,
+  port: 80,
   routes: {
     files: {
       relativeTo: Path.join(__dirname, '../../client/build'),
