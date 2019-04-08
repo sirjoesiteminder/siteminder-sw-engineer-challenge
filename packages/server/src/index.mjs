@@ -1,8 +1,11 @@
 import Hapi from 'Hapi';
+import Joi from 'Joi';
 import Inert from 'Inert';
 import Path from 'path';
 import send from './email/index.mjs';
 import Boom from 'Boom';
+import dotenv from 'dotenv';
+dotenv.config();
 
 // Create a server with a host and port
 const __dirname = Path.dirname(new URL(import.meta.url).pathname);
@@ -30,15 +33,26 @@ const start = async () => {
         },
       },
     });
-    
+
     // Endpoint for sending an email
     server.route({
       method: 'POST',
       path: '/email',
-      // TODO: add API validation with JOI
-      handler: async ({body}, h) => {
+      options: {
+        validate: {
+          payload: {
+            to: Joi.string().min(3).max(140),
+            cc: Joi.string().allow(""),
+            bcc: Joi.string().allow(""),
+            subject: Joi.string().required(),
+            body: Joi.string().required(),
+          },
+          failAction: handleError
+        }
+      },
+      handler: async (req, h) => {
         try {
-          return await send(body);
+          return await send(req.payload);
         }
         catch(err) {
           console.error(err);
@@ -57,3 +71,16 @@ const start = async () => {
 };
 
 start();
+
+const handleError = function (request, h, err) {
+
+  if (err.isJoi && Array.isArray(err.details) && err.details.length > 0) {
+    const invalidItem = err.details[0];
+    return h.response(`Data Validation Error. Schema violation. <${invalidItem.path}> \nDetails: ${JSON.stringify(err.details)}`)
+    .code(400)
+    .takeover();
+  }
+
+  return h.response(err)
+  .takeover()
+};

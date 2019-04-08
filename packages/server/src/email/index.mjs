@@ -10,9 +10,8 @@ export default async (input) => {
     bcc: trimEmails(input.bcc),
     from: 'malherbe.chris.1@gmail.com',
     subject: input.subject,
-    text: input.text,
+    text: input.body,
   };
-
 
   return sendSendgrid(data);
 };

@@ -22,7 +22,15 @@ function App() {
 
     setSubmitInProgress(true);
 
-    const response = await fetch(`${serverUrl}email`, {method: 'POST', body: formState.values, mode: 'no-cors'});
+    const response = await fetch(`${serverUrl}email`, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formState.values),
+      mode: 'no-cors'
+    });
     setSubmitInProgress(false);
 
     if(response.status !== 200) {
